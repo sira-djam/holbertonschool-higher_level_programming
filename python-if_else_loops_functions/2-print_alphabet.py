@@ -1,7 +1,3 @@
-#!/usr/bin/python3
-def print_alphabet():
-    c = 'a'
-    while c <= 'z':
-        print(c, end='')
-        c = chr(ord(c) + 1)
-    print()
+#!/usr/bin/pytont3
+for letter in range(97, 123):
+    print("{}".format(chr(letter)), end="")
