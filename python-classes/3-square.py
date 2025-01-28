@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""attribu de variable de la classe square"""
 class Square:
     def __init__(self, size = 0):
         if not isinstance(size, int):
