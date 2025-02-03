@@ -1,6 +1,10 @@
 #!/usr/bin.python3
+"""creation de sous classe"""
+
+
 class MyList(list):
-    """creation de sous classe"""
+    """imprimer une liste ascendante"""
+
+
     def print_sorted(self):
-        """imprimer une liste ascendante"""
         print(sorted(self))
