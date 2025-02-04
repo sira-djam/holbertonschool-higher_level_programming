@@ -4,4 +4,5 @@
 def is_same_class(obj, a_class):
     """verification si c'est le même objet"""
 
-    return isinstance(obj, a_class)
+
+    return type(obj) is a_class
