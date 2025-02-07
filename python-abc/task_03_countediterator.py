@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # Define the CountedIterator class which extends the built-in iterator
 class CountedIterator:
     def __init__(self, iterable):
