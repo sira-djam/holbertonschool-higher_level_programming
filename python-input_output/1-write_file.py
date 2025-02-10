@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""fonction for open fil in python"""
+
+
 def write_file(filename="", text=""):
     """Opens the file in write mode ('w') with UTF-8 encoding."""
     """If the file doesn't exist, it will be created. If the file already exists,
