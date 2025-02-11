@@ -1,11 +1,8 @@
 #!/usr/bin/python3
-"""use fonction who use append"""
+"""append file"""
 
 
-def write_file(filename="", text=""):
- """Opens the file in write mode ('w') with UTF-8 encoding."""
- with open(filename, mode="w", encoding="utf-8") as file:
-        """Writes the text into the file and returns the number
-        of characters written."""
-
+def append_write(filename="", text=""):
+    '''Function that appends a string'''
+    with open(filename, "a", encoding="utf-8") as file:
         return file.write(text)
