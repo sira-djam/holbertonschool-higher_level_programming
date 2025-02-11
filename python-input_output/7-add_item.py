@@ -1,23 +1,27 @@
 #!/usr/bin/python3
-import sys
+'''Load, add, save'''
 import json
+import sys
 
-# Import des fonctions de sauvegarde et de chargement de JSON
-save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-# Nom du fichier où on va enregistrer les données
-filename = "add_item.json"
+def save_to_json_file(my_obj, filename):
+    '''function that writes an Object to a text file'''
+    with open(filename, "w") as outfile:
+        json.dump(my_obj, outfile)
 
-# Essayer de charger les données existantes depuis le fichier JSON
-try:
-    my_list = load_from_json_file(filename)
-except FileNotFoundError:
-    # Si le fichier n'existe pas, on crée une liste vide
-    my_list = []
 
-# Ajouter les arguments de la ligne de commande à la liste (ignorer le premier argument qui est le script lui-même)
-my_list.extend(sys.argv[1:])
+def load_from_json_file(filename):
+    '''function that creates an Object from a “JSON file”'''
+    with open(filename, "r", encoding="utf_8") as file:
+        return json.load(file)
 
-# Sauvegarder la liste mise à jour dans le fichier
-save_to_json_file(my_list, filename)
+
+if __name__ == "__main__":
+    filename = "add_item.json"
+    try:
+        item = load_from_json_file(filename)
+    except FileNotFoundError:
+        item = []
+
+    item.extend(sys.argv[1:])
+    save_to_json_file(item, filename)
