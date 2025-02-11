@@ -3,9 +3,7 @@
 import json
 
 
-
 def from_json_string(my_str):
-    from io import StringIO
     """_summary_
 
     Args:
@@ -14,5 +12,4 @@ def from_json_string(my_str):
     Returns:
         _type_: _description_
     """
-
-    return json.dumps(my_str)
+    return json.loads(my_str)
