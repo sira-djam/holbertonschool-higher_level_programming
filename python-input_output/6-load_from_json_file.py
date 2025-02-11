@@ -10,4 +10,4 @@ def load_from_json_file(filename):
         Load the JSON content of the file and create the corresponding
         Python object
         """
-    return json.load(file)
+        return json.load(file)
