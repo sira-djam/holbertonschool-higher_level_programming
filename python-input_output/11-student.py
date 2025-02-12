@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""class Student that defines a student"""
+"""Class Student that defines a student"""
 
 
 class Student:
-    """define a class student"""
+    """Define a class Student"""
 
     def __init__(self, first_name, last_name, age):
-        """instanciation of class attribute"""
+        """Instantiation of class attributes"""
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
@@ -19,7 +19,7 @@ class Student:
                     for key in attrs if key in self.__dict__}
         return self.__dict__
 
-def reload_from_json(self, json):
-    """replaces all attributes of the Student instance"""
-    for key, value in json.items():
-        setattr(self, key, value)
+    def reload_from_json(self, json):
+        """Replace all attributes of the Student instance"""
+        for key, value in json.items():
+            setattr(self, key, value)
