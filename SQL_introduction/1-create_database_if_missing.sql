@@ -1,2 +1,2 @@
 -- creates the database
-CREATE DATABASES hbtn_0c_0;
+CREATE DATABASES IF NOTE EXISTS hbtn_0c_0;
